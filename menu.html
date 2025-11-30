@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - MAMA'S Home Kitchen</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script>
+        // Official number: 2348036009944 (No spaces, plus signs, or dashes)
+        const WA_NUMBER = '2348036009944'; 
+        // Classic message provided by user
+        const WA_MESSAGE = 'Good day, I would like to place an order for: ';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderButtons = document.querySelectorAll('.btn-order-wa');
+
+            orderButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const menuItem = event.target.closest('.menu-item').getAttribute('data-item');
+                    const encodedMessage = encodeURIComponent(WA_MESSAGE + menuItem);
+                    const whatsappUrl = `https://wa.me/${WA_NUMBER}?text=${encodedMessage}`;
+                    window.open(whatsappUrl, '_blank');
+                });
+            });
+
+            // Simple Menu Toggle for mobile (requires CSS for .main-nav.open)
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            menuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('open');
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="logo">MAMA'S Home Kitchen</h1>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="menu.html" class="nav-item active">Menu</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+                <a href="menu.html" class="btn btn-primary">Order Now</a>
+            </nav>
+            <i class="fas fa-bars menu-toggle"></i>
+        </div>
+    </header>
+
+    <main class="menu-page-main">
+        
+        <section class="page-header" style="padding: 5rem 0 2rem;">
+            <div class="container fade-in-up">
+                <h2 class="section-title">Mama's Full Menu & Prices</h2>
+                <p class="section-subtitle">Authentic, Home-Cooked Nigerian Delicacies. Click the <i class="fab fa-whatsapp" style="color: green;"></i> button to order!</p>
+            </div>
+        </section>
+
+        <aside class="menu-sidebar">
+            <nav class="sidebar-nav">
+                <a href="#rice-dishes" class="sidebar-nav-item"><i class="fas fa-plate-wheat"></i> Rice Dishes</a>
+                <a href="#soups" class="sidebar-nav-item"><i class="fas fa-bowl-food"></i> Soups</a>
+                <a href="#swallow" class="sidebar-nav-item"><i class="fas fa-drumstick-bite"></i> Swallow</a>
+                <a href="#protein" class="sidebar-nav-item"><i class="fas fa-fish"></i> Protein</a>
+                <a href="#extras" class="sidebar-nav-item"><i class="fas fa-blender"></i> Extras & Drinks</a>
+            </nav>
+        </aside>
+
+        <section class="full-menu">
+            <div class="container menu-content-wrapper">
+                
+                <div class="menu-category fade-in-up" id="rice-dishes">
+                    <h3>Rice Dishes <i class="fas fa-plate-wheat menu-icon"></i></h3>
+                    <div class="menu-item-list">
+                        
+                        <div class="menu-item" data-item="Fried Rice">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Fried Rice</span>
+                                    <span class="item-price">₦2,000</span>
+                                </div>
+                                <p class="item-description">Seasoned rice stir-fried with mixed vegetables and special spices.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Jollof Rice">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Jollof Rice</span>
+                                    <span class="item-price">₦2,000</span>
+                                </div>
+                                <p class="item-description">Mama's famous smoky Jollof, slow-cooked in a rich tomato and pepper base.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item="White Rice">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">White Rice</span>
+                                    <span class="item-price">₦2,000</span>
+                                </div>
+                                <p class="item-description">Classic boiled rice, perfect complement to any soup or stew.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Local/Coconut Rice">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Local/Coconut Rice</span>
+                                    <span class="item-price">₦2,000</span>
+                                </div>
+                                <p class="item-description">Rice cooked with fresh coconut milk for a sweet and nutty aroma.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category fade-in-up" id="soups">
+                    <h3>Soups <i class="fas fa-bowl-food menu-icon"></i></h3>
+                    <div class="menu-item-list">
+                        
+                        <div class="menu-item menu-special-item" data-item="Fisher Man Soup">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Fisher Man Soup (Seafood Special)</span>
+                                    <span class="item-price">₦5,000</span>
+                                </div>
+                                <p class="item-description">Premium soup loaded with assorted fresh seafood. Serves one large portion.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="White Soup (Protein Separate)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">White Soup</span>
+                                    <span class="item-price">₦3,000</span>
+                                </div>
+                                <p class="item-description">Light soup base, perfect for Pounded Yam. (Price per portion, protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Banga Soup (Protein Separate)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Banga Soup</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Palm nut soup, fragrant and deeply flavorful. (Price per portion, protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Vegetable Soup (Efo Riro)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Vegetable Soup (Efo Riro)</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Rich vegetable stew made with fresh spinach/pumpkin leaves. (Protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Afang Soup (Protein Separate)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Afang Soup</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Nutritious blend of Afang leaves and waterleaf. (Price per portion, protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item="Egusi Soup (Protein Separate)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Egusi Soup</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Melon seed soup, thick and rich. (Price per portion, protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item="Bitter-Leaf Soup (Protein Separate)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Bitter-Leaf Soup</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Rich soup made with washed bitter leaves and palm oil. (Protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Orha Soup (Protein Separate)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Orha Soup</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Traditional soup featuring Oha leaves. (Protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Ogbono Soup (Protein Separate)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Ogbono Soup</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Draw soup made from ground ogbono seeds. (Protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Okro Soup (Fresh - Protein Separate)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Okro Soup (Fresh)</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Fresh Okra (Okro) soup cooked with traditional spices. (Protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Dried Okro Soup (Protein Separate)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Dried Okro Soup</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Dried Okra (Okro) soup for a distinct flavour. (Protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item="Okoho Soup (Protein Separate)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Okoho Soup</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">A specialty from the Idoma people, often served with Pounded Yam. (Protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item="Efo Riro (Vegetable Stew)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Efo Riro</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Yoruba style spinach stew. (Protein separate)</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item="Gbegiri/Ewedu (Abula Base)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Gbegiri / Ewedu</span>
+                                    <span class="item-price">₦1,000</span>
+                                </div>
+                                <p class="item-description">Bean soup (Gbegiri) and jute leaves soup (Ewedu), essential for Amala dishes.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="menu-category fade-in-up" id="swallow">
+                    <h3>Swallow <i class="fas fa-drumstick-bite menu-icon"></i></h3>
+                    <div class="menu-item-list">
+                        
+                        <div class="menu-item" data-item="Garri (Eba)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Garri (Eba)</span>
+                                    <span class="item-price">₦400</span>
+                                </div>
+                                <p class="item-description">Cassava flour meal, price per wrap.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Semovita">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Semovita</span>
+                                    <span class="item-price">₦400</span>
+                                </div>
+                                <p class="item-description">Semolina-based swallow, price per wrap.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Wheat">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Wheat</span>
+                                    <span class="item-price">₦400</span>
+                                </div>
+                                <p class="item-description">Wheat flour swallow, price per wrap.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Amala">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Amala</span>
+                                    <span class="item-price">₦400</span>
+                                </div>
+                                <p class="item-description">Yam flour meal, a classic accompaniment to Gbegiri/Ewedu, price per wrap.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Fufu (Akpu)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Fufu (Akpu)</span>
+                                    <span class="item-price">₦400</span>
+                                </div>
+                                <p class="item-description">Fermented cassava swallow, price per wrap.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Pounded Yam">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Pounded Yam</span>
+                                    <span class="item-price">₦400</span>
+                                </div>
+                                <p class="item-description">Traditional pounded yam meal, price per wrap.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Oat Meal">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Oat Meal</span>
+                                    <span class="item-price">₦400</span>
+                                </div>
+                                <p class="item-description">Oat-based swallow alternative, price per wrap.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Plantain Flour">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Plantain Flour</span>
+                                    <span class="item-price">₦400</span>
+                                </div>
+                                <p class="item-description">Plantain-based swallow, price per wrap.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="menu-category fade-in-up" id="protein">
+                    <h3>Proteins <i class="fas fa-fish menu-icon"></i></h3>
+                    <div class="menu-item-list">
+                        
+                        <div class="menu-item" data-item="Chicken (Large Piece)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Chicken</span>
+                                    <span class="item-price">₦4,000</span>
+                                </div>
+                                <p class="item-description">Large portion of well-seasoned fried or grilled chicken.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Turkey (Large Piece)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Turkey</span>
+                                    <span class="item-price">₦4,000</span>
+                                </div>
+                                <p class="item-description">Large portion of well-seasoned fried or grilled turkey.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item="Crocker Fish">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Crocker Fish</span>
+                                    <span class="item-price">₦4,000</span>
+                                </div>
+                                <p class="item-description">Whole or large piece of fresh Crocker Fish.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Dried Fish">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Dried Fish</span>
+                                    <span class="item-price">₦2,500</span>
+                                </div>
+                                <p class="item-description">Smoky dried fish, excellent for soups and stews.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Kota/Titus Fish">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Kota/Titus Fish</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Freshly fried or grilled Mackerel (Titus) fish.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item="Fried Goat Meat (Per Piece)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Fried Goat Meat</span>
+                                    <span class="item-price">₦1,000</span>
+                                </div>
+                                <p class="item-description">Per piece. Marinated and deeply flavored fried goat meat.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Fried Beef (Per Piece)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Fried Beef</span>
+                                    <span class="item-price">₦1,000</span>
+                                </div>
+                                <p class="item-description">Per piece. Marinated and deeply flavored fried beef.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Boiled Goat Meat (Per Piece)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Boiled Goat Meat</span>
+                                    <span class="item-price">₦700</span>
+                                </div>
+                                <p class="item-description">Per piece. Tender boiled goat meat, perfect for soups.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Boiled Beef (Per Piece)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Boiled Beef</span>
+                                    <span class="item-price">₦700</span>
+                                </div>
+                                <p class="item-description">Per piece. Tender boiled beef, perfect for soups.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item="Assorted Meat (Per Piece)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Assorted Meat</span>
+                                    <span class="item-price">₦700</span>
+                                </div>
+                                <p class="item-description">Per piece. Mix of tripe, cowskin (pomo), etc., perfect for soups/stews.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div><div class="menu-category fade-in-up" id="extras">
+                    <h3>Extras & Specials <i class="fas fa-blender menu-icon"></i></h3>
+                    <div class="menu-item-list">
+
+                        <div class="menu-item" data-item="Chips and Egg">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Chips and Egg</span>
+                                    <span class="item-price">₦3,500</span>
+                                </div>
+                                <p class="item-description">Fried Irish potatoes with scrambled eggs.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item="Boiled Yam with Vegetable">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Boiled Yam with Vegetable</span>
+                                    <span class="item-price">₦3,000</span>
+                                </div>
+                                <p class="item-description">A light meal of tender boiled yam served with a rich vegetable stew.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Plantain and Egg">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Plantain and Egg</span>
+                                    <span class="item-price">₦2,500</span>
+                                </div>
+                                <p class="item-description">Fried plantain (Dodo) served with scrambled eggs.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Intestine Pepper Soup">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Intestine Pepper Soup</span>
+                                    <span class="item-price">₦2,500</span>
+                                </div>
+                                <p class="item-description">Spicy, aromatic broth featuring cooked intestines.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Beans Porridge">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Beans Porridge</span>
+                                    <span class="item-price">₦2,000</span>
+                                </div>
+                                <p class="item-description">Slow-cooked beans in rich tomato and pepper base.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Indomie and Egg">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Indomie and Egg</span>
+                                    <span class="item-price">₦2,000</span>
+                                </div>
+                                <p class="item-description">Stir-fried instant noodles served with scrambled eggs.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Spaghetti">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Spaghetti</span>
+                                    <span class="item-price">₦2,000</span>
+                                </div>
+                                <p class="item-description">Spaghetti tossed in a rich Nigerian sauce.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Cow Head & Tail Pepper Soup">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Cow Head & Tail P.Soup</span>
+                                    <span class="item-price">₦2,000</span>
+                                </div>
+                                <p class="item-description">Spicy broth with tender cuts of cow head and tail.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Catfish Pepper Soup">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Catfish Pepper Soup</span>
+                                    <span class="item-price">₦2,000</span>
+                                </div>
+                                <p class="item-description">Hot and spicy Catfish served in a savory pepper broth.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Moi Moi with Fish/Egg">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Moi Moi with Fish/Egg</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Steamed bean pudding, rich in flavor with your choice of filling.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="Plantain (Dodo)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Plantain (Dodo)</span>
+                                    <span class="item-price">₦1,000</span>
+                                </div>
+                                <p class="item-description">Perfectly fried ripe plantain slices (Dodo).</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" data-item="Salad">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Salad</span>
+                                    <span class="item-price">₦1,000</span>
+                                </div>
+                                <p class="item-description">Fresh mixed vegetable salad.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    /div><div class="menu-category fade-in-up" id="extras">
+                    <h3>JUICES AND DRINKS <i class="fas fa-blender menu-icon"></i></h3>
+                    <div class="menu-item-list">
+
+                        <div class="menu-item menu-drink" data-item="Carrot Juice">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Carrot Juice</span>
+                                    <span class="item-price">₦2,500</span>
+                                </div>
+                                <p class="item-description">Freshly squeezed carrot juice.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        <div class="menu-item menu-drink" data-item="Fruit Salad">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Fruit Salad</span>
+                                    <span class="item-price">₦1,700</span>
+                                </div>
+                                <p class="item-description">A mix of seasonal fresh fruit.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        <div class="menu-item menu-drink" data-item="Pineapple Juice">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Pineapple Juice</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Freshly squeezed pineapple juice.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        <div class="menu-item menu-drink" data-item="Water Melon Juice">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Water Melon Juice</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Freshly squeezed watermelon juice.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        <div class="menu-item menu-drink" data-item="Orange Juice">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Orange Juice</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Freshly squeezed orange juice.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        <div class="menu-item menu-drink" data-item="Ginger Drink">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Ginger Drink</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Spicy, homemade ginger drink.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        <div class="menu-item menu-drink" data-item="Tiger Nut (Kunu Aya)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Tiger Nut (Kunu Aya)</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Traditional creamy tiger nut milk drink.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        <div class="menu-item menu-drink" data-item="Smoothie">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Smoothie</span>
+                                    <span class="item-price">₦1,500</span>
+                                </div>
+                                <p class="item-description">Fruit and yogurt blend.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        <div class="menu-item menu-drink" data-item="Malt Drink">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Malt Drink</span>
+                                    <span class="item-price">₦600</span>
+                                </div>
+                                <p class="item-description">Bottled malt beverage.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        <div class="menu-item menu-drink" data-item="Soft Drink (Coke, Fanta, Sprite)">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Soft Drink (Coke, Fanta, Sprite)</span>
+                                    <span class="item-price">₦500</span>
+                                </div>
+                                <p class="item-description">Choice of popular carbonated soft drinks.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        <div class="menu-item menu-drink" data-item="Kunu/Zobo">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Kunu/Zobo</span>
+                                    <span class="item-price">₦500</span>
+                                </div>
+                                <p class="item-description">Traditional homemade beverages (Kunu - millet or Zobo - hibiscus).</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        <div class="menu-item menu-drink" data-item="Bottled Water">
+                            <div class="menu-item-info">
+                                <div class="item-header">
+                                    <span class="item-name">Bottled Water</span>
+                                    <span class="item-price">₦300</span>
+                                </div>
+                                <p class="item-description">Standard bottled water.</p>
+                                <button class="btn-order-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Order Pickup - MAMA'S Home Kitchen</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <meta name="description" content="Contact MAMA'S Home Kitchen for catering, large orders, or find our pickup location and kitchen hours.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "MAMA'S Home Kitchen",
+      "url": "http://www.mamaskitchen.com/contact.html",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Opposite Step Pharmacy, Jikwoyi Road",
+        "addressLocality": "Karu",
+        "addressRegion": "Abuja",
+        "addressCountry": "NG",
+        "postalCode": "900108" 
+      },
+      "telephone": "+2348036009944",
+      "email": "orders@mamaskitchen.com",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "09:00", "closes": "23:00" }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <header class="header header-minimal">
+        <div class="container header-content">
+            <h1 class="logo logo-minimal">MAMA'S HOME KITCHEN</h1>
+            <nav class="main-nav" id="main-nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="menu.html" class="nav-item">Menu</a>
+                <a href="contact.html" class="nav-item active">Contact</a>
+                <a href="menu.html" class="btn btn-minimal-accent">Place Order</a>
+            </nav>
+            <i class="fas fa-bars menu-toggle" aria-controls="main-nav-links" aria-expanded="false"></i>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="page-header hero-minimal" style="padding: 5rem 0 3rem;">
+            <div class="container">
+                <h2 class="section-title hero-title-simple text-accent">GET IN TOUCH</h2>
+                <p class="section-subtitle">We are here to help with your orders and inquiries.</p>
+            </div>
+        </section>
+
+        <section class="contact-details-form padding-y-lg section-light-bg">
+            <div class="container contact-grid">
+                
+                <div class="contact-info contact-card">
+                    <h3 class="text-accent">Direct Communication</h3>
+                    <p class="intro-text">Find our location and operating hours below.</p>
+
+                    <address class="contact-list">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt icon-minimal"></i>
+                            <div>
+                                <p><strong>Address:</strong></p>
+                                <a href="https://www.google.com/maps/place/Mama%E2%80%99s+Home+Kitchen/@9.0022997,7.5696854,17z/data=!3m1!4b1!4m6!3m5!1s0x104e0f00655f87e7:0x9c1122694ffd864d!8m2!3d9.0022944!4d7.5722603!16s%2Fg%2F11m5sb3sqm?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="text-link-minimal">
+                                    **Opposite Step Pharmacy, Jikwoyi Road, Karu, Abuja, Nigeria**
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp icon-minimal"></i>
+                            <div>
+                                <p><strong>Phone:</strong></p>
+                                <a href="https://wa.me/2348036009944" target="_blank" rel="noopener noreferrer" class="text-link-minimal">**0803 600 9944 (WhatsApp)**</a> 
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" style="border-bottom: none;">
+                            <i class="fas fa-envelope icon-minimal"></i>
+                            <div>
+                                <p><strong>Email:</strong></p>
+                                <a href="mailto:orders@mamaskitchen.com" class="text-link-minimal">orders@mamaskitchen.com</a>
+                            </div>
+                        </div>
+                    </address>
+
+                    <div class="divider-line divider-minimal"></div>
+                    
+                    <h4 class="text-accent">Kitchen Hours (Open Now)</h4>
+                    <ul class="hours-list">
+                        <li>**Mon - Sun:** **09:00 AM - 11:00 PM**</li>
+                    </ul>
+                </div>
+
+                <div class="contact-form contact-card">
+                    <h3 class="text-accent">Send Us a Quick Note</h3>
+                    
+                    <div id="form-message" class="form-message" aria-live="polite" hidden></div>
+
+                    <form action="#" method="POST" id="contact-form" class="form-grid"> 
+                        
+                        <input type="text" name="hp_field" id="hp_field" style="display:none !important;" tabindex="-1" autocomplete="off">
+
+                        <div class="input-group">
+                            <i class="fas fa-user input-icon"></i>
+                            <input type="text" name="name" placeholder="Full Name" required aria-label="Full Name" class="input-minimal" data-error="Please enter your full name.">
+                        </div>
+                        
+                        <div class="input-group">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" name="email" placeholder="Email Address" required aria-label="Email Address" class="input-minimal" data-error="Please enter a valid email address.">
+                        </div>
+                        
+                        <div class="input-group">
+                            <i class="fas fa-phone input-icon"></i>
+                            <input type="tel" name="phone" placeholder="Phone Number (Optional)" aria-label="Phone Number" class="input-minimal">
+                        </div>
+                        
+                        <div class="input-group">
+                            <i class="fas fa-tag input-icon"></i>
+                            <input type="text" name="subject" placeholder="Inquiry Subject" required aria-label="Inquiry Subject" class="input-minimal" data-error="Please provide a subject.">
+                        </div>
+                        
+                        <textarea name="message" placeholder="Your Message" rows="6" required aria-label="Your message" class="input-minimal"></textarea>
+                        
+                        <button type="submit" class="btn btn-primary btn-minimal-outline btn-form-submit">
+                            <i class="fas fa-paper-plane"></i> Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="location-map section-dark-bg padding-y-lg">
+            <div class="container">
+                <h3 class="section-title text-center text-light">VISIT OUR KITCHEN</h3>
+                
+                <div class="map-container map-minimal" style="height: 400px;">
+                    <iframe 
+                        src="https://www.google.com/maps/place/Mama%E2%80%99s+Home+Kitchen/@9.0022997,7.5696854,17z/data=!3m1!4b1!4m6!3m5!1s0x104e0f00655f87e7:0x9c1122694ffd864d!8m2!3d9.0022944!4d7.5722603!16s%2Fg%2F11m5sb3sqm?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
+                        width="100%" 
+                        height="100%" 
+                        style="border: 0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mama's Home Kitchen Location Map (Jikwoyi Road)">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer footer-minimal">
+        <div class="container footer-content-grid">
+            <div class="footer-left">
+                <h4 class="logo logo-minimal">MAMA'S HOME KITCHEN</h4>
+                <p class="copyright">© 2024 MAMA'S Home Kitchen. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f icon-social-minimal"></i></a>
+                <a href="#" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram icon-social-minimal"></i></a>
+                <a href="https://wa.me/2348036009944" aria-label="Contact us on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp icon-social-minimal"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script> 
+</body>
+</html>

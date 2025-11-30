@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAMA'S Home Kitchen - Authentic African Comfort Food</title>
+    <meta name="description" content="Experience the authentic, homemade taste of African cuisine. Fresh ingredients and traditional recipes from Mama's Home Kitchen." />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    
+    <div id="loading-overlay" class="loading-overlay" aria-hidden="true">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="logo"><a href="index.html">MAMA'S Home Kitchen</a></h1>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <a href="index.html" class="nav-item active">Home</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="menu.html" class="nav-item">Menu</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+                <a href="#" class="btn btn-order">Order Now!</a>
+            </nav>
+            <button class="menu-toggle" aria-controls="main-nav-menu" aria-expanded="false" title="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero-carousel" role="region" aria-label="Featured Daily Specials">
+            <div class="carousel-track">
+                <div class="carousel-slide active hero-slide-1"> 
+                    <img src="images/mama's home kitchen.jpg" alt="Delicious smoky Jollof Rice with Fried Chicken" class="carousel-img">
+                    <div class="hero-content">
+                        <h2 class="animate-in">Experience Authentic Home Cooking</h2>
+                        <p class="animate-in delay-1">Prepared with **love**, served with **pride**.</p>
+                        <a href="menu.html" class="btn btn-primary animate-in delay-2">View Our Menu</a>
+                    </div>
+                </div>
+                <div class="carousel-slide hero-slide-2">
+                    <img src="images/Homemade Quality.png" alt="Rich Egusi Soup served with Pounded Yam" class="carousel-img">
+                    <div class="hero-content">
+                        <h2 class="animate-in">Soup of the Day: Egusi & Pounded Yam</h2>
+                        <p class="animate-in delay-1">Rich, satisfying, and deeply traditional. Don't miss out!</p>
+                        <a href="menu.html" class="btn btn-primary animate-in delay-2">Order This Special</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-control next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots" role="tablist" aria-label="Carousel slide buttons"></div>
+        </section>
+
+        <section class="features container">
+            <h3 class="section-title fade-up">Why Choose Mama's?</h3>
+            <div class="feature-grid">
+                
+                <div class="feature-card fade-up">
+                    <i class="fas fa-heart-circle-check feature-icon" aria-hidden="true"></i>
+                    <h4>Homemade Quality</h4>
+                    <p>Traditional recipes passed down through generations, made with genuine care.</p>
+                </div>
+                
+                <div class="feature-card fade-up" style="animation-delay: 0.1s;">
+                    <i class="fas fa-leaf feature-icon" aria-hidden="true"></i>
+                    <h4>Fresh Ingredients</h4>
+                    <p>Sourcing local and seasonal produce daily for optimal taste and quality.</p>
+                </div>
+                
+                <div class="feature-card fade-up" style="animation-delay: 0.2s;">
+                    <i class="fas fa-motorcycle feature-icon" aria-hidden="true"></i>
+                    <h4>Fast Delivery</h4>
+                    <p>Hot, delicious meals delivered quickly and safely right to your door.</p>
+                </div>
+                
+                <div class="feature-card fade-up" style="animation-delay: 0.3s;">
+                    <i class="fas fa-medal feature-icon" aria-hidden="true"></i>
+                    <h4>100% Satisfaction</h4>
+                    <p>Your happiness is our priority. We guarantee deliciousness with every bite!</p>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="about-preview parallax" id="about-us-preview">
+            <div class="container about-flex">
+                <div class="about-text fade-up">
+                    <h3 class="section-title">The Mama's Legacy</h3>
+                    <p>We believe food is the purest expression of **love and community**. Mama's Home Kitchen was founded on the principle of sharing the rich, deep flavors of authentic African cuisine, prepared the way it should be: **slow, fresh, and with heart**.</p>
+                    <a href="about.html" class="btn btn-primary">Read Our Story</a>
+                </div>
+                <div class="about-image-side fade-up" style="animation-delay: 0.2s;">
+                    <img src="images/banga soup.png" alt="Mama, the Head Chef, smiling in the kitchen" class="chef-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-menu container">
+            <h3 class="section-title fade-up">Explore Our Most Popular Dishes</h3>
+            <p class="section-subtitle fade-up">A perfect taste of authentic Nigerian and West African cuisine.</p>
+            <div class="menu-showcase-grid">
+                
+                <div class="menu-showcase-card fade-up">
+                    <div class="card-image-wrapper">
+                        <img src="images/Fried Rice & Chicken.png" alt="Fried Rice and Chicken" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h4>Fried Rice & Chicken</h4>
+                        <p>Our popular party-style rice, perfectly mixed with vegetables.</p>
+                        <span class="card-price">₦4,000</span>
+                    </div>
+                </div>
+
+                <div class="menu-showcase-card fade-up" style="animation-delay: 0.1s;">
+                    <div class="card-image-wrapper">
+                        <img src="images/turkey.png" alt="Turkey" class="card-image">
+                    </div>
+                    <div class="card-content">
+    <h4>Turkey</h4>
+    <p>Slow-cooked and lightly spiced turkey, juicy, flavorful, and perfect alongside any meal.</p>
+    <span class="card-price">₦2,000</span>
+</div>
+
+                </div>
+
+                <div class="menu-showcase-card fade-up" style="animation-delay: 0.2s;">
+                    <div class="card-image-wrapper">
+                        <img src="images/moi moi.png" alt="Moi Moi (steamed bean pudding) with egg" class="card-image">
+                    </div>
+                    <div class="card-content">
+    <h4>Moi Moi with Fish and Egg</h4>
+    <p>A rich and fluffy steamed bean pudding, infused with local spices, tender fish, and slices of boiled egg.</p>
+    <span class="card-price">₦1,500</span>
+</div>
+                </div>
+
+                <div class="menu-showcase-card fade-up" style="animation-delay: 0.3s;">
+                    <div class="card-image-wrapper">
+                        <img src="images/efor.png" alt="Efo Riro vegetable stew" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h4>Efo Riro </h4>
+                        <p>A rich, savory vegetable stew made with smoked fish and peppers.</p>
+                        <span class="card-price">₦1,500</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center cta-small fade-up">
+                <a href="menu.html" class="btn btn-secondary">See All Dishes (60+ Items)</a>
+            </div>
+        </section>
+        
+        <section class="dish-spotlight container">
+            <h3 class="section-title fade-up">Chef's Top Pick of the Week</h3>
+            <div class="spotlight-content">
+                
+                <div class="dish-card fade-up">
+                    <div class="dish-image-placeholder">
+                        <img src="images/Fried Rice & Chicken.png" alt="Jollof Rice with Fried Chicken and Plantain" class="spotlight-img">
+                    </div>
+                    <h4 class="dish-title">Jollof Rice & Fried Chicken <i class="fas fa-pepper-hot icon-spicy"></i></h4>
+                    <p>A classic, smoky West African dish, perfectly seasoned and served with tender chicken and fried plantain.</p>
+                    <p class="dish-price">₦4,500</p>
+                    <a href="menu.html" class="btn btn-secondary">Order Now</a>
+                </div>
+
+                <div class="dish-card fade-up" style="animation-delay: 0.2s;">
+                    <div class="dish-image-placeholder">
+                        <img src="images/white soup.png" alt="Ofe Nsala (White Soup) served with Semovita" class="spotlight-img">
+                    </div>
+                    <h4 class="dish-title">White Soup and Semovita <i class="fas fa-hat-chef icon-chef"></i></h4>
+                    <p>The ultimate comfort food: smooth Semovita paired with rich, savory White Soup (Ofe Nsala) with goat meat.</p>
+                    <p class="dish-price">₦4,100</p>
+                    <a href="menu.html" class="btn btn-secondary">Order Now</a>
+                </div>
+
+                <div class="dish-card fade-up" style="animation-delay: 0.4s;">
+                    <div class="dish-image-placeholder">
+                        <img src="images/porriage beans.png" alt="Hearty Beans Porridge with a side of fried plantain" class="spotlight-img">
+                    </div>
+                    <h4 class="dish-title">Beans Porridge & Plantain<i class="fas fa-cookie-bite icon-snack"></i></h4>
+                    <p>Hearty, well-seasoned beans porridge served with sweet, golden fried plantain, a satisfying lunch.</p>
+                    <p class="dish-price">₦3,000</p>
+                    <a href="menu.html" class="btn btn-secondary">Order Now</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="daily-tip parallax">
+            <div class="container">
+                <h3 class="tip-title fade-up"><i class="fas fa-utensils"></i> Mama's Cooking Secret</h3>
+                <p class="tip-content fade-up" style="animation-delay: 0.2s;">"The secret ingredient is always love. But a little bit of fermented locust bean (Iru) makes all the difference in soups!"</p>
+            </div>
+        </section>
+
+
+        <section class="newsletter fade-up">
+            <div class="container newsletter-content">
+                <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+                <div>
+                    <h3>Stay Connected & Get 10% Off!</h3>
+                    <p>Subscribe to our newsletter for weekly specials, cooking tips, and exclusive discounts.</p>
+                </div>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email address" required aria-label="Email address for newsletter signup">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="testimonials container">
+            <h3 class="section-title fade-up">What Our Customers Say</h3>
+            <div class="testimonial-slider fade-up">
+                <div class="testimonial-item active">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"The food is divine! It truly tastes like my grandmother's cooking. Highly recommend the Egusi!"</p>
+                    <p class="customer-name">- Aisha D.</p>
+                </div>
+                <div class="testimonial-item">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Professional service and unbelievably fresh ingredients. My new favorite spot!"</p>
+                    <p class="customer-name">- Ken M.</p>
+                </div>
+                <div class="testimonial-item">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Mama's home kitchen delivers on its promise. Every dish feels like it was made with genuine care and love."</p>
+                    <p class="customer-name">- Sarah L.</p>
+                </div>
+            </div>
+            <div class="testimonial-nav">
+                <button class="nav-arrow prev-testimonial" aria-label="Previous testimonial"><i class="fas fa-arrow-left"></i></button>
+                <button class="nav-arrow next-testimonial" aria-label="Next testimonial"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <section class="cta fade-up">
+            <div class="container">
+                <h3>Ready for a Taste of Home?</h3>
+                <p>Don't wait! Experience the difference quality and care makes.</p>
+                <a href="menu.html" class="btn btn-primary pulse-animation">Order Your Meal Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            
+            <div class="footer-col logo-col">
+                <h4 class="logo">MAMA'S Home Kitchen</h4>
+                <p>Authentic, Homemade, Hearty.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="menu.html">Full Menu</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="#">Catering Services</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> opposite step pharmacy jikwoyi road Karu, Abuja , Karu, Nigeria</p>
+                <p><i class="fas fa-phone"></i> 0803 600 9944 </p>
+                <p><i class="fas fa-envelope"></i> info@mamaskitchen.com</p>
+            </div>
+
+            <div class="footer-col social-col">
+                <h4>Follow Mama</h4>
+                <div class="social-links">
+                    <a href="https://web.facebook.com/profile.php?id=100093935169518" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p class="copyright">&copy; 2025 MAMA'S Home Kitchen. All rights reserved.</p>
+            <p class="privacy-links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+        </div>
+    </footer>
+    
+    <button id="backToTop" class="back-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
